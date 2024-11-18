@@ -40,11 +40,11 @@ function displayCars(cars) {
 
 // load cars based on users specific inputs
 function filterCars() {
-  const minYear = parseInt(document.getElementById('minYear').value) || 0;
-  const maxYear = parseInt(document.getElementById('maxYear').value) || 9999;
+  const minYear = parseInt(document.getElementById('minYear').value) || 2000;
+  const maxYear = parseInt(document.getElementById('maxYear').value) || 2024;
   const maxMileage = parseInt(document.getElementById('maxMileage').value) || Infinity;
-  const minPrice = parseInt(document.getElementById('minPrice').value) || 0;
-  const maxPrice = parseInt(document.getElementById('maxPrice').value) || Infinity;
+  const minPrice = parseInt(document.getElementById('minPrice').value) || 5000;
+  const maxPrice = parseInt(document.getElementById('maxPrice').value) || 8000;
   const makes = Array.from(document.getElementById('make').selectedOptions).map(option => option.value);
   const colors = Array.from(document.getElementById('color').selectedOptions).map(option => option.value);
 
@@ -60,6 +60,7 @@ function filterCars() {
       (colors.length === 0 || colors.includes(car.color))
     );
   });
+  
 
   // Display filtered cars
   displayCars(filteredCars);

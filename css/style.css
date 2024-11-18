@@ -36,6 +36,9 @@ h1 { /* Header styling */
   text-align: left; 
   margin-right: 10px;
   align-self: center; 
+  color: #333;
+  text-shadow: hsl(202, 99%, 50%) 1px 1px;
+  font-size: 1.5rem;
 }
 
 .filter-form input,
@@ -43,7 +46,12 @@ h1 { /* Header styling */
   width: 100%;
   padding: 10px;
   box-sizing: border-box;
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
+
 
 .filter-form button {
   background-color: #01a1fd;
