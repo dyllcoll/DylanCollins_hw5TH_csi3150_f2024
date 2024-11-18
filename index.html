@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Listings</title>
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dylan Auto Sales</h1>
+        <!-- Filters for specifics -->
+        <div class="filter-form">
+            <label for="minYear">Min Year:</label>
+            <input type="number" id="minYear" name="minYear" min="2000" placeholder="Min Year">
+            
+            <label for="maxYear">Max Year:</label>
+            <input type="number" id="maxYear" name="maxYear" max="2023" placeholder="Max Year">
+            
+            <label for="maxMileage">Max Mileage:</label>
+            <input type="number" id="maxMileage" name="maxMileage" placeholder="Max Mileage">
+            
+            <label for="minPrice">Min Price:</label>
+            <input type="number" id="minPrice" name="minPrice" placeholder="Min Price">
+            
+            <label for="maxPrice">Max Price:</label>
+            <input type="number" id="maxPrice" name="maxPrice" placeholder="Max Price">
+            <!-- make/models -->
+            <label for="make">Make:</label>
+            <select id="make" name="make" multiple>
+                <option value="Toyota">Toyota</option>
+                <option value="Honda">Honda</option>
+                <option value="Ford">Ford</option>
+                <option value="Nissan">Nissan</option>
+                <option value="Chevrolet">Chevrolet</option>
+                <option value="Volkswagen">Volkswagen</option>
+                <option value="Hyundai">Hyundai</option>
+                <option value="Subaru">Subaru</option>
+                <option value="Mazda">Mazda</option>
+                <option value="Dodge">Dodge</option>
+                <option value="Cadillac">Cadillac</option>
+                <option value="Jaguar">Jaguar</option>
+                <option value="Tesla">Tesla</option>
+                <option value="Porsche">Porsche</option>
+                <option value="Lexus">Lexus</option>
+                <option value="BMW">BMW</option>
+            </select>
+            <!-- Color options -->
+            <label for="color">Color:</label>
+            <select id="color" name="color" multiple>
+                <option value="Silver">Silver</option>
+                <option value="White">White</option>
+                <option value="Black">Black</option>
+                <option value="Blue">Blue</option>
+                <option value="Red">Red</option>
+                <option value="Gray">Gray</option>
+                <option value="Green">Green</option>
+            </select>
+            <!-- filter button -->
+            <button type="button" onclick="filterCars()">Filter</button>
+        </div>
+        <!-- Car listing section -->
+        <div id="carListings" class="car-listings">
+        </div>
+    </div>
+    <!-- JavaScript -->
+    <script src="js/usedCars.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
